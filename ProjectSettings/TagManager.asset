@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gem
   - Trap
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fondo_dinamico
+    uniqueID: 1735253563
+    locked: 0
   - name: Background
     uniqueID: 1002129609
     locked: 0

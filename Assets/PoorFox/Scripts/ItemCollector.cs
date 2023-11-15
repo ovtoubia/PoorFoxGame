@@ -14,7 +14,6 @@ public class ItemCollector : MonoBehaviour
         Destroy(collision.gameObject);
         gems++;
         gemsText.text = "Gems: " +gems;
-        //Ausilio
     }
    }
 }
