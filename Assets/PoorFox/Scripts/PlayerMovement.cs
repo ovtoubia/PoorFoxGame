@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 12f;
     [SerializeField] private LayerMask jumpableGround;
 
+    [Header("Rebote")]
+    [SerializeField] private float velocidadRebote;
+
     private PlayerLife recuperacion;
 
     public float knockBackLength, knockBackForce;
@@ -41,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
         // Inicializa lastDamageTime a un valor suficientemente pequeño
         lastDamageTime = -damageCooldown;
+
+
     }
 
     // Update is called once per frame
@@ -128,4 +133,10 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    public void Rebote()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, velocidadRebote);
+    }
+
 }
