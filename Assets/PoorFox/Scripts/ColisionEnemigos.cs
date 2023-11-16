@@ -15,7 +15,7 @@ public class ColisionEnemigos : MonoBehaviour
         if (other.gameObject.CompareTag("Player")){
             foreach(ContactPoint2D punto in other.contacts)
             {
-                if (other.GetContact(0).normal.y <= 0.9)
+                if (other.GetContact(0).normal.y <= -0.9)
                 {
                     other.gameObject.GetComponent<PlayerMovement>().Rebote();
                     animator.SetTrigger("Hit");
